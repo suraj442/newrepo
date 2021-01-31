@@ -18,9 +18,9 @@ public class TestActiTimeInvalidInput extends BaseTest{
 		
 		LoginPagePOM lp = new LoginPagePOM(driver);
 		Flib flib = new Flib();
-		int rc = flib.rowCount(EXCEL_PATH, "InvalidCredentials");// take the rowcount to use for for loop
+		int rcount = flib.rowCount(EXCEL_PATH, "InvalidCredentials");// take the rowcount to use for for loop
 		WebDriverCommonLib wb = new WebDriverCommonLib();
-		for (int i=1;i<=rc;i++) // to iterate the rows
+		for (int i=1;i<=rcount;i++) // to iterate the rows
 		{
 		String username = flib.readcellData(EXCEL_PATH, "InvalidCredentials", i, 0);
 		String password = flib.readcellData(EXCEL_PATH, "InvalidCredentials", i, 1);
