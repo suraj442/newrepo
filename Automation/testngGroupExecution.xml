@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+
+		<groups>
+			<define name="ActiTimeTEstCase">
+				<include name="SMOKE"></include>
+				<include name="INTEGRATION"></include>
+				<include name="FUNCTIONAL"></include>
+			</define>
+
+			<run>
+				<exclude name="SMOKE"></exclude>
+				<exclude name="FUNCTIONAL"></exclude>
+				<include name="INTEGRATION"></include>
+
+			</run>
+
+		</groups>
+
+
+
+
+		<classes>
+			<class name="testpack.GroupExcution" />
+		</classes>
+
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
